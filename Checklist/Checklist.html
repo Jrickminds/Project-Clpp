@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>checklist</title>
+    <link rel="stylesheet" href="checkstyle.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <script defer src="pag.js"></script>
+</head>
+
+<body>
+    <header>
+        <input type="checkbox" id="but_menu">
+        <label for="but_menu">&#9776</label>
+        <nav id="menu">
+            <ul>
+                <li><a href="../Home/home.html">Home</a></li>
+                <li><a>CheckList</a>
+                    <ul>
+                        <li><a href="../Checklist/Checklist.html">Novo</a></li>
+                        <li><a href="/Checklist/Grupos.html">Grupos</a></li>
+                        <li><a href="/Checklist/criados.html">Criados</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Relatorios/relatorios.html">Relatorio</a></li>
+                <li><a href="../Mensagens/mensagens.html">Mensagens</a></li>
+            </ul>
+        </nav>
+        <div>
+            <a href="home.html"><img class="logo"
+                    src="../Home/539c9c79-535f-40d8-b3c5-643a3fc909e2-removebg-preview.png" height=""
+                    width="120px" /></a>
+        </div>
+    </header>
+    <main>
+        <div id="container">
+            <div id="icon">
+                <input type="text" id="txte" value="Novo formulario"></input>
+                <button onclick="edit()"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                        height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+                        <g>
+                            <rect fill="none" height="24" width="24" />
+                        </g>
+                        <g>
+                            <g>
+                                <path
+                                    d="M16.81,8.94l-3.75-3.75L4,14.25V18h3.75L16.81,8.94z M6,16v-0.92l7.06-7.06l0.92,0.92L6.92,16H6z" />
+                                <path
+                                    d="M19.71,6.04c0.39-0.39,0.39-1.02,0-1.41l-2.34-2.34C17.17,2.09,16.92,2,16.66,2c-0.25,0-0.51,0.1-0.7,0.29l-1.83,1.83 l3.75,3.75L19.71,6.04z" />
+                                <rect height="4" width="20" x="2" y="20" />
+                            </g>
+                        </g>
+                    </svg></button>     
+            </div>
+            <div id="data">
+                <p>Data inicial</p> 
+                <input type="date">
+                <p>Data final</p>
+                <input type="date">                     
+            </div> 
+            <div id="icon2">
+                <div id="mostrar">
+                    
+                </div>
+                <button onclick="notificar()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                        fill="#000000">
+                        <path
+                            d="M10.01 21.01c0 1.1.89 1.99 1.99 1.99s1.99-.89 1.99-1.99h-3.98zM12 6c2.76 0 5 2.24 5 5v7H7v-7c0-2.76 2.24-5 5-5zm0-4.5c-.83 0-1.5.67-1.5 1.5v1.17C7.36 4.85 5 7.65 5 11v6l-2 2v1h18v-1l-2-2v-6c0-3.35-2.36-6.15-5.5-6.83V3c0-.83-.67-1.5-1.5-1.5zM13 8h-2v3H8v2h3v3h2v-3h3v-2h-3z" />
+                    </svg></button>
+                <button onclick="visualizar()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                        fill="#000000">
+                        <path d="M0 0h24v24H0V0z" fill="none" />
+                        <path
+                            d="M12 6c3.79 0 7.17 2.13 8.82 5.5C19.17 14.87 15.79 17 12 17s-7.17-2.13-8.82-5.5C4.83 8.13 8.21 6 12 6m0-2C7 4 2.73 7.11 1 11.5 2.73 15.89 7 19 12 19s9.27-3.11 11-7.5C21.27 7.11 17 4 12 4zm0 5c1.38 0 2.5 1.12 2.5 2.5S13.38 14 12 14s-2.5-1.12-2.5-2.5S10.62 9 12 9m0-2c-2.48 0-4.5 2.02-4.5 4.5S9.52 16 12 16s4.5-2.02 4.5-4.5S14.48 7 12 7z" />
+                    </svg></button>
+                <button onclick="salvar()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                        fill="#000000">
+                        <path d="M0 0h24v24H0V0z" fill="none" />
+                        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                    </svg></button>
+                <button onclick="excluir()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                        fill="#000000">
+                        <path d="M0 0h24v24H0V0z" fill="none" />
+                        <path
+                            d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z" />
+                    </svg></button>
+            </div>
+        </div>
+        <div id="container3">
+            <div id="caixa2">
+                <h3>Assinaturas:</h3>
+                <input type="text" placeholder="CPF">
+                <input type="text" placeholder="Manual">
+                <input type="text" placeholder="Foto">
+            </div>
+            <div id="caixa3">
+                <h3>Escolhas:</h3>
+                <input type="text" placeholder="Check">
+                <input type="text" placeholder="Texto">
+                <input type="text" placeholder="multipla escolha">
+            </div>
+            <div id="caixa4">
+                <h3>Data, hora e localização:</h3>
+                <input type="text" placeholder="Data e hora">
+                <input type="text" placeholder="Localização">
+            </div>
+            <div id="caixa5">
+                <div id="divisao">
+                    <div id="icon3">
+                        <div id="pergunta">
+                            <input type="text" value="Pergunta">
+                            <button onclick=""><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                            height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+                            <g>
+                                <rect fill="none" height="24" width="24" />
+                            </g>
+                            <g>
+                                <g>
+                                    <path
+                                        d="M16.81,8.94l-3.75-3.75L4,14.25V18h3.75L16.81,8.94z M6,16v-0.92l7.06-7.06l0.92,0.92L6.92,16H6z" />
+                                    <path
+                                        d="M19.71,6.04c0.39-0.39,0.39-1.02,0-1.41l-2.34-2.34C17.17,2.09,16.92,2,16.66,2c-0.25,0-0.51,0.1-0.7,0.29l-1.83,1.83 l3.75,3.75L19.71,6.04z" />
+                                    <rect height="4" width="20" x="2" y="20" />
+                                </g>
+                            </g>
+                        </svg></button>
+                        </div>
+                        <div id="resposta1">
+                            <input type="radio"><input type="text" value="Sim">
+                            <button onclick=""><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                            height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+                            <g>
+                                <rect fill="none" height="24" width="24" />
+                            </g>
+                            <g>
+                                <g>
+                                    <path
+                                        d="M16.81,8.94l-3.75-3.75L4,14.25V18h3.75L16.81,8.94z M6,16v-0.92l7.06-7.06l0.92,0.92L6.92,16H6z" />
+                                    <path
+                                        d="M19.71,6.04c0.39-0.39,0.39-1.02,0-1.41l-2.34-2.34C17.17,2.09,16.92,2,16.66,2c-0.25,0-0.51,0.1-0.7,0.29l-1.83,1.83 l3.75,3.75L19.71,6.04z" />
+                                    <rect height="4" width="20" x="2" y="20" />
+                                </g>
+                            </g>
+                        </svg></button>
+                        </div>
+                        <div id ="resposta2">
+                            <input type="radio"><input type="text" value="Não">
+                            <button onclick=""><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                            height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+                            <g>
+                                <rect fill="none" height="24" width="24" />
+                            </g>
+                            <g>
+                                <g>
+                                    <path
+                                        d="M16.81,8.94l-3.75-3.75L4,14.25V18h3.75L16.81,8.94z M6,16v-0.92l7.06-7.06l0.92,0.92L6.92,16H6z" />
+                                    <path
+                                        d="M19.71,6.04c0.39-0.39,0.39-1.02,0-1.41l-2.34-2.34C17.17,2.09,16.92,2,16.66,2c-0.25,0-0.51,0.1-0.7,0.29l-1.83,1.83 l3.75,3.75L19.71,6.04z" />
+                                    <rect height="4" width="20" x="2" y="20" />
+                                </g>
+                            </g>
+                        </svg></button>
+                        </div>
+                        <div id="resposta3" style="Display: none">
+                            <input type="radio"><input type="text" value="Talvez">
+                            <button onclick=""><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                            height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+                            <g>
+                                <rect fill="none" height="24" width="24" />
+                            </g>
+                            <g>
+                                <g>
+                                    <path
+                                        d="M16.81,8.94l-3.75-3.75L4,14.25V18h3.75L16.81,8.94z M6,16v-0.92l7.06-7.06l0.92,0.92L6.92,16H6z" />
+                                    <path
+                                        d="M19.71,6.04c0.39-0.39,0.39-1.02,0-1.41l-2.34-2.34C17.17,2.09,16.92,2,16.66,2c-0.25,0-0.51,0.1-0.7,0.29l-1.83,1.83 l3.75,3.75L19.71,6.04z" />
+                                    <rect height="4" width="20" x="2" y="20" />
+                                </g>
+                            </g>
+                        </svg></button>
+                            <button onclick=""><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                            fill="#000000">
+                            <path d="M0 0h24v24H0V0z" fill="none" />
+                            <path
+                                d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z" />
+                        </svg></button>
+                        </div>
+                    </div>
+                    <div id="icon4">
+                        <button onclick="copiar()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                                fill="#000000">
+                                <path d="M0 0h24v24H0V0z" fill="none" />
+                                <path
+                                    d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.49 2 2 6.49 2 12s4.49 10 10 10 10-4.49 10-10S17.51 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+                            </svg></button>
+                        <button onclick="visualpag()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                                fill="#000000">
+                                <path d="M0 0h24v24H0V0z" fill="none" />
+                                <path
+                                    d="M12 6c3.79 0 7.17 2.13 8.82 5.5C19.17 14.87 15.79 17 12 17s-7.17-2.13-8.82-5.5C4.83 8.13 8.21 6 12 6m0-2C7 4 2.73 7.11 1 11.5 2.73 15.89 7 19 12 19s9.27-3.11 11-7.5C21.27 7.11 17 4 12 4zm0 5c1.38 0 2.5 1.12 2.5 2.5S13.38 14 12 14s-2.5-1.12-2.5-2.5S10.62 9 12 9m0-2c-2.48 0-4.5 2.02-4.5 4.5S9.52 16 12 16s4.5-2.02 4.5-4.5S14.48 7 12 7z" />
+                            </svg></button>
+                        <button  onclick="copipag()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                                fill="#000000">
+                                <path d="M0 0h24v24H0V0z" fill="none" />
+                                <path
+                                    d="M9 7H7v2h2V7zm0 4H7v2h2v-2zm0-8c-1.11 0-2 .9-2 2h2V3zm4 12h-2v2h2v-2zm6-12v2h2c0-1.1-.9-2-2-2zm-6 0h-2v2h2V3zM9 17v-2H7c0 1.1.89 2 2 2zm10-4h2v-2h-2v2zm0-4h2V7h-2v2zm0 8c1.1 0 2-.9 2-2h-2v2zM5 7H3v12c0 1.1.89 2 2 2h12v-2H5V7zm10-2h2V3h-2v2zm0 12h2v-2h-2v2z" />
+                            </svg></button>
+                        <button onclick="salvarpag()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                                fill="#000000">
+                                <path d="M0 0h24v24H0V0z" fill="none" />
+                                <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                            </svg></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
