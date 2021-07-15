@@ -7,7 +7,7 @@ function edit () {
     }
 }
 
-var campo = true
+let campo = true
 function visualizar() {
     const ver = document.querySelector('#txte').value
     
@@ -40,12 +40,7 @@ function copiar() {
 function copipag() {
     let divisao = document.querySelector("#divisao").cloneNode(true)
     document.querySelector('#caixa5').appendChild(divisao)
-
 }
 
 const divisao1 = document.getElementById('divisao')
 console.log(divisao1)
-
-const divisao= document.getElementById('divisao')
-divisao.setAttribute('id', '1')
-console.log(divisao)
